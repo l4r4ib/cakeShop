@@ -1,6 +1,7 @@
 const allFilterItems = document.querySelectorAll('.filter-item');
 const allFilterBtns = document.querySelectorAll('.filter-btn');
-
+const cartButton = document.querySelector('.cartBtn');
+const shoppingCart = document.querySelector('.shoppingCart')
 window.addEventListener('DOMContentLoaded', () => {
     allFilterBtns[0].classList.add('active-btn');
 });
@@ -28,3 +29,8 @@ function resetActiveBtn(){
         btn.classList.remove('active-btn');
     });
 }
+
+cartButton.addEventListener('click', ()=>{
+    shoppingCart.classList.toggle('show');
+})
+
